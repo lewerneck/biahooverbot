@@ -606,7 +606,7 @@ async function iniciarFluxoDeConteudo(ctx) {
 
    // const inlineKeyboardCereja = Markup.inlineKeyboard([
   //      [Markup.button.callback('Comprar por R$ 57', 'Cereja')]
-    ]);
+   // ]);
  
     // Delay de 5 segundos antes de enviar MENSAGEM 1
 	setTimeout(async () => {
@@ -620,10 +620,10 @@ async function iniciarFluxoDeConteudo(ctx) {
 Esses são os meus pacotes  🔞👇🏻`;
 
     const inlineKeyboardCereja = Markup.inlineKeyboard([
-       [Markup.button.callback('Comprar por R$ 57', 'Cereja')]
+       [Markup.button.callback('Comprar por R$ 57', 'Cereja')]   ]);
   
     const inlineKeyboardPessego = Markup.inlineKeyboard([
-        [Markup.button.callback('Comprar por R$ 37', 'Pessego')]
+        [Markup.button.callback('Comprar por R$ 37', 'Pessego')]   ]);
 
        const inlineKeyboardMorango = Markup.inlineKeyboard([
         [Markup.button.callback('Comprar por R$ 19,90', 'Morango')]
@@ -644,7 +644,7 @@ Esses são os meus pacotes  🔞👇🏻`;
 
   //  const inlineKeyboardMorango = Markup.inlineKeyboard([
    //     [Markup.button.callback('Comprar por R$ 19,90', 'Morango')]
-    ]);
+   // ]);
 
     // Delay de 15 segundos antes de enviar MENSAGEM 3 (total de 30 segundos após a primeira)
     setTimeout(async () => {
