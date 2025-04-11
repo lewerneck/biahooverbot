@@ -81,9 +81,9 @@ let messageKeys = {};
 
 // Objeto para armazenar os valores dos pacotes
 const precosPacotes = {
-    Morango: 1990,  
-    Pessego: 3700,  
-    Cereja: 5700,   
+    Morango: 2700,  
+    Pessego: 5500,  
+    Cereja: 7300,   
 };
 
 // Função para obter o nome do bot
@@ -620,13 +620,13 @@ async function iniciarFluxoDeConteudo(ctx) {
 Esses são os meus pacotes  🔞👇🏻`;
 
     const inlineKeyboardCereja = Markup.inlineKeyboard([
-       [Markup.button.callback('Comprar por R$ 57', 'Cereja')]   ]);
+       [Markup.button.callback('Comprar por R$ 73', 'Cereja')]   ]);
   
     const inlineKeyboardPessego = Markup.inlineKeyboard([
-        [Markup.button.callback('Comprar por R$ 37', 'Pessego')]   ]);
+        [Markup.button.callback('Comprar por R$ 55', 'Pessego')]   ]);
 
        const inlineKeyboardMorango = Markup.inlineKeyboard([
-        [Markup.button.callback('Comprar por R$ 19,90', 'Morango')]
+        [Markup.button.callback('Comprar por R$ 27', 'Morango')]
     ]);
 
     // Delay de 10 segundos antes de enviar MENSAGEM 2 (total de 15 segundos após a primeira)
