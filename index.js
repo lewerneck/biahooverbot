@@ -657,10 +657,10 @@ Esses são os meus pacotes  🔞👇🏻`;
    // ]);
 
     // Delay de 15 segundos antes de enviar MENSAGEM 3 (total de 30 segundos após a primeira)
-    setTimeout(async () => {
-        const morangoMessage = await ctx.replyWithVideo(videoUrlMorango, { caption: captionMorango, parse_mode: 'MarkdownV2', reply_markup: inlineKeyboardMorango.reply_markup });
-    morangoMessageIds[`${ctx.chat.id}-morango`] = morangoMessage.message_id;
-	}, 9000); // 30 segundos (5s + 10s + 15s)
+   // setTimeout(async () => {
+ //       const morangoMessage = await ctx.replyWithVideo(videoUrlMorango, { caption: captionMorango, parse_mode: 'MarkdownV2', reply_markup: inlineKeyboardMorango.reply_markup });
+  //  morangoMessageIds[`${ctx.chat.id}-morango`] = morangoMessage.message_id;
+//	}, 9000); // 30 segundos (5s + 10s + 15s)
 	
 	
  // Mensagem final "To te esperando..." após MENSAGEM 3
