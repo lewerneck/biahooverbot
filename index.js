@@ -615,7 +615,7 @@ async function iniciarFluxoDeConteudo(ctx) {
 	}, 5000); // 5 segundos
 
     // MENSAGEM 2 - PACOTE PÊSSEGO
-    const videoUrlPessego = 'https://video.gumlet.io/66180b4d8ec2efeb9164568c/67f88196b6d587c54ae630ac/download.mp4';
+    const videoUrlPessego = 'https://github.com/lewerneck/biahooverbot/blob/main/photo_2024-10-13_19-23-34.jpg?raw=true';
     const captionPessego = `Tô esperando por você 💖
 Esses são os meus pacotes  🔞👇🏻`;
 
