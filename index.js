@@ -610,7 +610,7 @@ async function iniciarFluxoDeConteudo(ctx) {
  
     // Delay de 5 segundos antes de enviar MENSAGEM 1
 	setTimeout(async () => {
-    const cerejaMessage = await ctx.replyWithVideo(videoUrlCereja, { caption: captionCereja, parse_mode: 'MarkdownV2', reply_markup: inlineKeyboardCereja.reply_markup });
+    const cerejaMessage = await ctx.replyWithVideo(videoUrlCereja, { caption: captionCereja, parse_mode: 'MarkdownV2' });
     cerejaMessageIds[`${ctx.chat.id}-cereja`] = cerejaMessage.message_id; // Mover esta linha para dentro da função assíncrona
 	}, 5000); // 5 segundos
 
@@ -631,7 +631,7 @@ Esses são os meus pacotes  🔞👇🏻`;
 
     // Delay de 10 segundos antes de enviar MENSAGEM 2 (total de 15 segundos após a primeira)
     setTimeout(async () => {
-        const pessegoMessage = await ctx.replyWithVideo(videoUrlPessego, { caption: captionPessego, parse_mode: 'MarkdownV2', reply_markup: inlineKeyboardPessego.reply_markup });
+        const pessegoMessage = await ctx.replyWithVideo(videoUrlPessego, { caption: captionPessego, parse_mode: 'MarkdownV2', reply_markup: inlineKeyboardCereja.reply_markup, reply_markup: inlineKeyboardPessego.reply_markup, reply_markup: inlineKeyboardMorango.reply_markup });
     pessegoMessageIds[`${ctx.chat.id}-pessego`] = pessegoMessage.message_id;
 	}, 7000); // 15 segundos (5s + 10s)
 		
