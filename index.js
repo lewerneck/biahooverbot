@@ -614,7 +614,7 @@ async function iniciarFluxoDeConteudo(ctx) {
     masterMessageIds[`${ctx.chat.id}-master`] = masterMessage.message_id; // Mover esta linha para dentro da função assíncrona
 	}, 5000); // 5 segundos
 
-    // MENSAGEM 2 - PACOTE PÊSSEGO
+    // MENSAGEM 2 - PACOTE PICANTE
     const videoUrlPicante = 'https://video.gumlet.io/66180b4d8ec2efeb9164568c/67f8891bb6d587c54ae64f55/download.mp4';
     const captionPicante = `Tô esperando por você 💖
 Esses são os meus pacotes  🔞👇🏻`;
@@ -647,7 +647,7 @@ Esses são os meus pacotes  🔞👇🏻`;
 		
     // MENSAGEM 3 - PACOTE CEREJA
  //   const videoUrlCereja = 'https://video.gumlet.io/66180b4d8ec2efeb9164568c/671bc33038a902e47566e3d3/download.mp4';
-//    const captionCereja = `***Pacote Cereja 🍓*** \n` + 
+//    const captionCereja = `***Pacote Cereja 🍒*** \n` + 
 	//					   `13 Vídeos e 10 Fotos \n\n` +
 	//					   `Nesse pack você vai encontrar meus melhores videozinhos gozando muito e gemendo gostoso \n\n` +
  //                          `Tem vídeo meladinha, me masturbando, com plugzinho no meu cu, e dos melhores jeitos pra você\\!`;
@@ -1123,7 +1123,7 @@ bot.action(/gerarPagamentoComDesconto:(.+)-(\d+)/, async (ctx) => {
 function obterDescricaoPacote(pacote) {
     const descricoes = {
         Cereja: 'CEREJA',
-        Picante: 'PÊSSEGO',
+        Picante: 'PICANTE',
         Master: 'MASTER'
     };
     return descricoes[pacote] || 'Pacote Desconhecido';
@@ -1143,19 +1143,19 @@ function obterPacotePorValor(valorPago) {
         (valorEmCentavos >= (precosPacotes.Cereja / 2) - margem && valorEmCentavos <= (precosPacotes.Cereja / 2) + margem) ||
         (valorEmCentavos >= Math.round(precosPacotes.Cereja * 0.7) - margem && valorEmCentavos <= Math.round(precosPacotes.Cereja * 0.7) + margem) // Desconto de 30%
     ) {
-        return { nome: 'Pacote CEREJA 🍓', link: 'https://lewerneck.github.io/a9fk-cereja' };
+        return { nome: 'Pacote CEREJA ⚜️', link: 'https://biahoover.github.io/xr26-cereja/' };
     } else if (
         (valorEmCentavos >= precosPacotes.Picante - margem && valorEmCentavos <= precosPacotes.Picante + margem) ||
         (valorEmCentavos >= (precosPacotes.Picante / 2) - margem && valorEmCentavos <= (precosPacotes.Picante / 2) + margem) ||
         (valorEmCentavos >= Math.round(precosPacotes.Picante * 0.7) - margem && valorEmCentavos <= Math.round(precosPacotes.Picante * 0.7) + margem) // Desconto de 30%
     ) {
-        return { nome: 'Pacote PÊSSEGO 🍑', link: 'https://lewerneck.github.io/b7lq-picante' };
+        return { nome: 'Pacote PICANTE 🌶️', link: 'https://biahoover.github.io/ap02-picante/' };
     } else if (
         (valorEmCentavos >= precosPacotes.Master - margem && valorEmCentavos <= precosPacotes.Master + margem) ||
         (valorEmCentavos >= (precosPacotes.Master / 2) - margem && valorEmCentavos <= (precosPacotes.Master / 2) + margem) ||
         (valorEmCentavos >= Math.round(precosPacotes.Master * 0.7) - margem && valorEmCentavos <= Math.round(precosPacotes.Master * 0.7) + margem) // Desconto de 30%
     ) {
-        return { nome: 'Pacote MASTER 🍒', link: 'https://lewerneck.github.io/x5pz-master' };
+        return { nome: 'Pacote MASTER ⚜️', link: 'https://biahoover.github.io/mk95-master/' };
     } else {
         return null; // Nenhum pacote corresponde ao valor
     }
@@ -1164,9 +1164,9 @@ function obterPacotePorValor(valorPago) {
 // Função para determinar o próximo pacote e o valor do upsell
 function obterUpsell(pacoteAtual) {
     const pacotes = {
-        'Pacote CEREJA 🍓': { nome: 'Pacote PÊSSEGO 🍑', preco: Math.round(precosPacotes['Picante'] / 2) },
-        'Pacote PÊSSEGO 🍑': { nome: 'Pacote MASTER 🍒', preco: Math.round(precosPacotes['Master'] / 2) },
-        'Pacote MASTER 🍒': { nome: 'Pacote CEREJA 🍓', preco: Math.round(precosPacotes['Cereja'] / 2) },
+        'Pacote CEREJA 🍒': { nome: 'Pacote PICANTE 🌶️', preco: Math.round(precosPacotes['Picante'] / 2) },
+        'Pacote PICANTE 🌶️': { nome: 'Pacote MASTER ⚜️', preco: Math.round(precosPacotes['Master'] / 2) },
+        'Pacote MASTER ⚜️': { nome: 'Pacote CEREJA 🍒', preco: Math.round(precosPacotes['Cereja'] / 2) },
     };
     return pacotes[pacoteAtual] || null;
 }
@@ -1201,7 +1201,7 @@ async function enviarUpsell(ctx, pacoteEntregue) {
 }
 
 // Comando para gerar pagamento via PIX no upsell
-bot.action(/(Pacote MASTER 🍒|Pacote PÊSSEGO 🍑|Pacote CEREJA 🍓)-(\d+)/, async (ctx) => {
+bot.action(/(Pacote MASTER ⚜️|Pacote PICANTE 🌶️|Pacote CEREJA 🍒)-(\d+)/, async (ctx) => {
     const pacoteEscolhido = ctx.match[1]; // Pacote escolhido a partir do callback_data
     const valor = parseInt(ctx.match[2], 10); // Valor do upsell diretamente do callback_data
 
