@@ -631,7 +631,17 @@ Esses são os meus pacotes  🔞👇🏻`;
 
     // Delay de 10 segundos antes de enviar MENSAGEM 2 (total de 15 segundos após a primeira)
     setTimeout(async () => {
-        const pessegoMessage = await ctx.replyWithVideo(videoUrlPessego, { caption: captionPessego, parse_mode: 'MarkdownV2', reply_markup: inlineKeyboardCereja.reply_markup, reply_markup: inlineKeyboardPessego.reply_markup, reply_markup: inlineKeyboardMorango.reply_markup });
+        const pessegoMessage = await ctx.replyWithVideo(videoUrlPessego, {
+  caption: captionPessego,
+  parse_mode: 'MarkdownV2',
+  reply_markup: {
+    inline_keyboard: [
+      ...inlineKeyboardCereja.reply_markup.inline_keyboard,
+      ...inlineKeyboardPessego.reply_markup.inline_keyboard,
+      ...inlineKeyboardMorango.reply_markup.inline_keyboard,
+    ]
+  }
+});
     pessegoMessageIds[`${ctx.chat.id}-pessego`] = pessegoMessage.message_id;
 	}, 7000); // 15 segundos (5s + 10s)
 		
