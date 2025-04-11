@@ -615,7 +615,7 @@ async function iniciarFluxoDeConteudo(ctx) {
 	}, 5000); // 5 segundos
 
     // MENSAGEM 2 - PACOTE PÊSSEGO
-    const videoUrlPessego = 'https://github.com/lewerneck/biahooverbot/blob/main/photo_2024-10-13_19-23-34.jpg?raw=true';
+    const videoUrlPessego = 'https://imgur.com/a/NXPFyBK';
     const captionPessego = `Tô esperando por você 💖
 Esses são os meus pacotes  🔞👇🏻`;
 
