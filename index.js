@@ -1143,7 +1143,7 @@ function obterPacotePorValor(valorPago) {
         (valorEmCentavos >= (precosPacotes.Cereja / 2) - margem && valorEmCentavos <= (precosPacotes.Cereja / 2) + margem) ||
         (valorEmCentavos >= Math.round(precosPacotes.Cereja * 0.7) - margem && valorEmCentavos <= Math.round(precosPacotes.Cereja * 0.7) + margem) // Desconto de 30%
     ) {
-        return { nome: 'Pacote CEREJA ⚜️', link: 'https://biahoover.github.io/xr26-cereja/' };
+        return { nome: 'Pacote CEREJA 🍒', link: 'https://biahoover.github.io/xr26-cereja/' };
     } else if (
         (valorEmCentavos >= precosPacotes.Picante - margem && valorEmCentavos <= precosPacotes.Picante + margem) ||
         (valorEmCentavos >= (precosPacotes.Picante / 2) - margem && valorEmCentavos <= (precosPacotes.Picante / 2) + margem) ||
